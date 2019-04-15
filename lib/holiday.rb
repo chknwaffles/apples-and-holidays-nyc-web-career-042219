@@ -92,6 +92,8 @@ def all_supplies_in_holidays(holiday_hash)
         msg += "#{item.capitalize}"
         if i != list.length - 1
           msg += ", "
+        elsif i == list.length - 1
+          msg += "\n"
         end
       end
     end
