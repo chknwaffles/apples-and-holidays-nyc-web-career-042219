@@ -91,10 +91,10 @@ def all_supplies_in_holidays(holiday_hash)
       list.each_with_index do |item, i|
         item_format = item.capitalize
         if item_format.include?(" ")
-        item_arr = item_format.split(" ")
-        item_arr.each {|w| w.capitalize!}
-        item_format = item_arr.join(" ")
-      end
+          item_arr = item_format.split(" ")
+          item_arr.each {|w| w.capitalize!}
+          item_format = item_arr.join(" ")
+        end
         msg += "#{item_format}"
         if i != list.length - 1
           msg += ", "
