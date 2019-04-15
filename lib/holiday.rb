@@ -92,7 +92,7 @@ def all_supplies_in_holidays(holiday_hash)
         item_format = item.capitalize
         if item_format.include?(" ")
         item_arr = item_format.split(" ")
-        item_arr[1].capitalize!
+        item_arr.each {|w| w.capitalize}
         item_format = item_arr.join(" ")
       end
         msg += "#{item_format}"
