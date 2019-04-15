@@ -79,7 +79,7 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season_format}:"
     holiday.each do |holiday, list|
       holiday_format = holiday.to_s.split(" ").capitalize.join
-      print "#{holiday_format}: "
+      print "/t#{holiday_format}: "
       list.each do |item|
         print item.capitalize
         if item.length > 1
