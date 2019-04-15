@@ -115,10 +115,9 @@ def all_holidays_with_bbq(holiday_hash)
   res = []
   holiday_hash.each do |season, holiday|
     holiday.each do |holiday, list|
-      list.each do |list, item|
+      list.each do |item|
         if item == "BBQ"
           res.push(holiday)
-          res.push("What")
         end
       end
     end
