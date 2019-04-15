@@ -49,6 +49,7 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
   # remember to return the updated hash
   temp_hash = {season: {holiday_name: supply_array}}
   holiday_hash.merge(temp_hash)
+  holiday_hash
 end
 
 def all_winter_holiday_supplies(holiday_hash)
