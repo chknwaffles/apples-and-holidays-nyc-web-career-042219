@@ -74,8 +74,8 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
+  msg = ""
   holiday_hash.each do |season, holiday|
-    msg = ""
     season_format = season.to_s.capitalize
     msg += "#{season_format}:"
     msg += "\n"
@@ -89,6 +89,12 @@ def all_supplies_in_holidays(holiday_hash)
       
       msg += "  #{holiday_format}: "
       list.each_with_index do |item, i|
+        item_format = item.capitalize
+        if holiday_format.include?("_")
+        holiday_arr = holiday_format.split("_")
+        holiday_arr[1].capitalize!
+        holiday_format = holiday_arr.join(" ")
+      end
         msg += "#{item.capitalize}"
         if i != list.length - 1
           msg += ", "
@@ -97,8 +103,8 @@ def all_supplies_in_holidays(holiday_hash)
         end
       end
     end
-    puts msg
   end
+  puts msg
 end
 
 def all_holidays_with_bbq(holiday_hash)
