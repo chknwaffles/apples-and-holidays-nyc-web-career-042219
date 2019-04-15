@@ -81,7 +81,7 @@ def all_supplies_in_holidays(holiday_hash)
     msg += "\n"
     holiday.each do |holiday, list|
       holiday_format = holiday.to_s.capitalize
-      if holiday_format.include?(" ")
+      if holiday_format.include?("_")
         holiday_format.split(" ")
         holiday_format[1].capitalize!
         holiday_format.join("")
