@@ -91,7 +91,7 @@ def all_supplies_in_holidays(holiday_hash)
       list.each_with_index do |item, i|
         item_format = item.capitalize
         if holiday_format.include?(" ")
-        holiday_arr = holiday_format.split("_")
+        holiday_arr = holiday_format.split(" ")
         holiday_arr[1].capitalize!
         holiday_format = holiday_arr.join(" ")
       end
