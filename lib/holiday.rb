@@ -78,10 +78,11 @@ def all_supplies_in_holidays(holiday_hash)
     season_format = season.to_s.capitalize
     puts "#{season_format}:"
     holiday.each do |holiday, list|
-      if holiday.to_s.include?(" ")
+      holiday_format = holiday.to_s.capitalize
+      if holiday..include?(" ")
         holiday.split(" ")
       end
-      holiday_format = 
+      
       print "/t#{holiday_format}: "
       list.each do |item|
         print item.capitalize
