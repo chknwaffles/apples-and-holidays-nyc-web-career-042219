@@ -78,9 +78,13 @@ def all_supplies_in_holidays(holiday_hash)
     season_format = season.to_s.capitalize
     puts season_format
     holiday.each do |holiday, list|
-      holiday_format
+      holiday_format = holiday.to_s.split(" ").capitalize.join
+      print "#{holiday_format}: "
       list.each do |item|
-        
+        print item.capitalize
+        if item.length > 1
+          print ", "
+        end
       end
     end
   end
