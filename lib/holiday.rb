@@ -88,7 +88,7 @@ def all_supplies_in_holidays(holiday_hash)
       
       msg += "  #{holiday_format}: "
       list.each do |item|
-        print item.capitalize
+        msg += item.capitalize
         if item.length > 1
           print ", "
         end
