@@ -59,6 +59,7 @@ def all_winter_holiday_supplies(holiday_hash)
       holiday.each do |holiday, list|
         list.each do |item|
           puts item
+          result.add(item)
         end
       end
     end
