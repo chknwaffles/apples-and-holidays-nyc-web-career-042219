@@ -83,7 +83,7 @@ def all_supplies_in_holidays(holiday_hash)
       holiday_format = holiday.to_s.capitalize
       if holiday_format.include?("_")
         holiday_arr = holiday_format.split("_")
-        holiday_arr[1].capitalize!
+        holiday_arr.each {|w| w.capitalize!}
         holiday_format = holiday_arr.join(" ")
       end
       
