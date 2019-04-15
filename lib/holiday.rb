@@ -83,7 +83,7 @@ def all_supplies_in_holidays(holiday_hash)
       if holiday_format.include?(" ")
         holiday_format.split(" ")
         holiday_format[1].capitalize!
-        holiday_format.join(" ")
+        holiday_format.join("")
       end
       
       msg += "  #{holiday_format}: "
