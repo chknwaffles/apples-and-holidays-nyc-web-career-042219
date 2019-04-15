@@ -79,7 +79,7 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season_format}:"
     holiday.each do |holiday, list|
       if holiday.to_s.include?(" ")
-        holiday
+        holiday.split(" ")
       end
       holiday_format = 
       print "/t#{holiday_format}: "
