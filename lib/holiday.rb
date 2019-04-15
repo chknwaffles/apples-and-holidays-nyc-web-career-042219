@@ -118,7 +118,6 @@ def all_holidays_with_bbq(holiday_hash)
       list.each do |list, item|
         if item == "BBQ"
           res.push(list)
-          puts list
         end
       end
     end
