@@ -97,6 +97,7 @@ def all_supplies_in_holidays(holiday_hash)
         end
         
         msg += "#{item_format}"
+        
         if i != list.length - 1
           msg += ", "
         elsif i == list.length - 1
