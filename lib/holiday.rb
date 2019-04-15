@@ -96,7 +96,7 @@ def all_supplies_in_holidays(holiday_hash)
           item_format = item_arr.join(" ")
         elsif item_format.include?("BBQ")
           item_arr = item_format.split("")
-          item_arr.each {|l| if l == 'B' l.capitalize!}
+          item_arr.each {|l| l.capitalize! if l == 'B' }
           item_format = item_arr.join(" ")
         end
         
