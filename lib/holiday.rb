@@ -77,7 +77,7 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holiday|
     msg = ""
     season_format = season.to_s.capitalize
-    msg += "#{season_format}:"
+    msg += "#{season_format}:\n"
     holiday.each do |holiday, list|
       holiday_format = holiday.to_s.capitalize
       if holiday_format.include?(" ")
@@ -86,7 +86,7 @@ def all_supplies_in_holidays(holiday_hash)
         holiday_format.join(" ")
       end
       
-      msg += "\n  #{holiday_format}: "
+      msg += "  #{holiday_format}: "
       list.each do |item|
         print item.capitalize
         if item.length > 1
